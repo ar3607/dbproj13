@@ -1,0 +1,71 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<div>
+	
+	<form method="POST" action="/adduser" target="_blank">
+		<p>Add New User:<br>
+		Name: <input type="text" name="name"><br>
+		Uni*:<input type="text" name="uni" required><br>
+		School at CU*:<input type="text" name="school_name" required>
+		<a href="CUSchools">See all Columbia Schools</a><br>
+		Major: <input type="text" name="major_name">
+		<a href="possibleMajors">See all Columbia majors</a><br>
+		Club Name: <input type="text" name="club_name">
+		<a href="possibleClubs">See our official approved Columbia Clubs list</a><br>
+		Since: <input type = "date" name = "since"><br>
+		Hobby Name: <input type="text" name="hobby_name">
+		<a href="possibleHobbies">See our hobbies list</a><br>
+		Work Field: <input type="text" name="work_field"><br>
+		Gender: <input type="text" name="gender"><br>
+		Short Bio: <input type="text" name="bio" maxlength="200"><br>
+		Age*: <input type = "number" name = "age" min="17" max="120" required><br>
+		Phone Number*(eg.3334445555): <input type="text" name="phone_number" min="1000000000"><br>
+		Email*: <input type="email" name="email" required><br>
+		Location:<input type="text" name="location"><br>
+		Graduation Year*: <input type="number" name="graduation_year" min="1950" required><br>
+	
+		<input type="submit"  name="adduserbtn" value="Add User"></p>
+		<p> fields marked with * are required. </p> 
+	</form>
+
+	<form method = "POST" action = '/selectUni' target='_blank'>
+		<p> Find Your Matches!<p>
+		Your Uni: <input type = 'text' name = 'uni'>
+		<input type = "submit" name = "submitUNibtn" value = "search"></p>
+
+	</form>
+
+	 <form method = "POST" action = '/yourInfo' target='_blank'>
+                <p>Look at Your Info <p>
+                Your Uni: <input type = 'text' name = 'uni'>
+                <input type = "submit" name = "submitUibtn" value = "search"></p>
+
+        </form>
+</div>
+<div>
+	<form method="POST" action ='/browse_school' target='_blank'>
+
+
+
+  <h1>Our users</h1>
+
+  <div>
+    {% for n in data%}
+    <div>{{n}}</div>
+    {% endfor %}
+
+  </div>
+
+
+</body>
+
+
+</html>

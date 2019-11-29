@@ -1,0 +1,26 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>new users added</h1>
+  <div>
+	Successfully added into Users
+  </div>
+  <div>
+	  <p><a href="/">Go to the home page</a></p>
+  </div>
+  <div>
+	{%for n in data%}
+	<div>{{n}}</div>
+	{% endfor %}
+</div>
+</body>
+
+
+</html>

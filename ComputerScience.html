@@ -1,0 +1,29 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+        <div class="header">
+  <h1>Our Members in the Computer Science Major</h1>
+</div>
+  <div>
+
+               <table id = "tbltwo" style = 'width:33%; float: left'>
+                {% for n in outputQ%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+               </table>
+  </div>
+
+  See which schools offer the CS major:
+
+               <a href="majorisin">Schools with Computer Science</a><br>
+
+</body>
+</html>

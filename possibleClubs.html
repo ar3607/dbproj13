@@ -1,0 +1,30 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+        <div class="header">
+  <h1>Possible Clubs</h1>
+</div>
+  <div>
+
+               <table id = "tbltwo" style = 'width:33%; float: left'>
+                {% for n in outputE%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+               </table>
+
+	       Look more into who is in your club and already signed up for our site!
+	       <a href="inOrchesis">Orchesis</a><br>
+
+  </div>
+
+</body>
+</html>
+~         

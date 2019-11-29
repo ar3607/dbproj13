@@ -1,0 +1,100 @@
+<html>
+  <style>
+    body{
+      font-size: 20pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+ 
+Your info: 
+<div>
+
+	<div class='info'>
+
+             <table id = "tblone" style = 'width:50%; float: left'>
+                     <tr><td>name</td></tr>
+                     <tr><td>uni</td></tr>
+                     <tr><td>work place</td></tr>
+                     <tr><td>school</td></tr>
+                     <tr><td>gender </td></tr>
+                     <tr><td>bio</td></tr>
+                     <tr><td>age</td></tr>
+                     <tr><td>phone number</td></tr>
+                     <tr><td>email</td></tr>
+
+
+              </table>
+
+               <table id = "tbltwo" style = 'width:50%; float: right'>
+                {% for n in outputA1%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+
+               </table>
+  <br></br>
+  <br></br>
+<p>All your ratings:</p>
+
+               <table id = "tbltwo2" style = 'width: 100%'>
+		{% for n in outputC3%}
+                <tr><td>{{n}}</td></tr>
+		{% endfor %}
+		{% for n in outputB2%}
+		<tr><td>{{n}}</td></tr>
+		{% endfor %}
+               </table>
+
+
+	       <p> All your meet-ups:</p> 
+<table id = "tbltwo3" style = 'width: 30%;float= left'>
+                <tr>Date   </tr>
+		<tr>Location   </tr>
+		<tr>Lasted for   </tr>
+		<tr>Met with(uni   )</tr>
+		</table>
+		
+<table id="tbl4" style = 'width: 70%; float=right'>	
+		{% for n1 in outputD%}
+		<tr><td>{{n1}}</td></tr>
+                {% endfor %}
+		 {%for n2 in outputE%}
+		 <tr><td>{{n2}}</td></tr>
+                {% endfor %}
+
+                {%for n3 in outputF%}
+		<tr><td>{{n3}}</td></tr>
+                {% endfor %}
+
+                {%for n4 in outputG%}
+		<tr><td>{{n4}}</td></tr>
+                {% endfor %}
+               </table>
+
+	       <div>
+                       <form method="POST" action="/addMeet" target="_blank">
+                        <p>Creat profile for a  meet-up here:<br></p>
+                        your uni: <input name = "yourUni2" type ="text">
+                        their uni:<input name="uni2" type="text">
+                        Date:<input name="date" type="text">
+			location:<input name="location" type="text">
+                        length:<input name="length" type="text">
+			Meet Up Number (random number 1-999):<input name="meet_up_number" type="text">
+			<input type="submit" value = "add Review" name="sbmtbtn">
+                        </form>
+        </div>
+	       <div>
+		       <form method="POST" action="/addReview" target="_blank">
+			<p>Add a Review for people you have met up here:<br></p>
+			your uni: <input name = "yourUni" type ="text">
+			their uni:<input name="uni" type="text">
+			Review Score(out of 5):<input name="score" type="text">
+			<input type="submit" value = "add Review" name="sbmtbtn">
+			</form>
+	</div>
+
+</body>
+</html>
+~            

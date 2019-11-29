@@ -1,0 +1,41 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+	<div class="header">
+  <h1>Your match!</h1>
+</div>
+  <div>
+
+
+	     <table id = "tblone" style = 'width:33%; float: left'>
+		     <tr><td>name</td></tr>
+		     <tr><td>uni</td></tr>
+		     <tr><td>work place</td></tr>
+		     <tr><td>school</td></tr>
+		     <tr><td>gender </td></tr>
+		     <tr><td>bio</td></tr>
+		     <tr><td>age</td></tr>
+		     <tr><td>phone number</td></tr>
+		     <tr><td>email</td></tr>
+
+
+	      </table>
+
+	       <table id = "tbltwo" style = 'width:33%; float: left'>
+		{% for n in outputA%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+	       </table>
+
+  </div>
+
+</body>
+</html>

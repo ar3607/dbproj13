@@ -1,0 +1,46 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+ 
+  <div>
+	  <table id = "tblone" style = 'width:33%; float: left'>
+		  <thead><tr><th>User 1</th></thead>
+		 
+		{% for n in output%}
+		<tr><td>{{n}}</td></tr>
+		{% endfor %}
+	</table>
+	 <table id = "tbltwo" style = 'width:33%; float: left'>
+                  <thead><tr><th>User 2</th></thead>
+
+                {% for n in output1%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+        </table>
+	 <table id = "tblthree" style = 'width:33%; float: left'>
+                  <thead><tr><th>Compatability Score</th></thead>
+
+                {% for n in output2%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+        </table>
+
+
+         <form method = "POST" action = '/findMatch' target='_blank'>
+                <p> find out more about your match <p>
+                Match Uni: <input type = 'text' name = 'uni'>
+                <input type = "submit" name = "submitUNibtn" value = "search"></p>
+        </form>
+
+    
+  </div>
+
+</body>
+</html>

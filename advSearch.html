@@ -1,0 +1,27 @@
+<html>
+<header>
+</header>
+
+<body>
+
+<h1>browse results by major:</h1>
+<div>
+               <table id = "tblmajor" style = 'width:33%; float: left'>
+                {% for n in majors%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+               </table>
+</div>
+
+
+<h1>browse results by schools:</h1>
+<div>
+               <table id = "tblschool" style = 'width:33%; float: left'>
+                {% for n in schools%}
+                <tr><td>{{n}}</td></tr>
+                {% endfor %}
+               </table>
+</div>
+
+</body>
+</html>
